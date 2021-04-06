@@ -1,0 +1,24 @@
+Connected clientfunction on_connect 
+
+#Callback Function on Connection with MQTT Server
+ Connects to mqtt-broker at port 1883
+ if rc==0
+   Prints "Connected with return code==0" on good connection 
+ else
+   prints "Bad connection return code"
+subscribes to the messages published on various topics by clients
+
+function on_message
+prints the messages received from subscribed topics
+
+function on_disconnect
+#callback function when client disconnects from broker
+
+while True:
+  Makes an API call to fetch the direction and latitude-longitude information with its start and end position
+  publishes the direction and lat long information to the RSU to be stored in the database for future
+  checks the direction of the client and 
+  subsribes to topics such as accident,traffic, weather in its direction
+     within that direction
+	  cars position from RSU is calculated every one second to find the zone
+	  and subscibes to the message according to the zone.

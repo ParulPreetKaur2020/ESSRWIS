@@ -1,0 +1,25 @@
+Road Side Unit
+
+function on_connect 
+#Callback Function on Connection with MQTT Server
+ Connects to mqtt-broker at port 1883
+ if rc==0
+   Prints "Connected with return code==0" on good connection 
+ else
+   prints "Bad connection return code"
+subscribes to the messages published on various topics by clients
+
+function on_message
+prints the messages received from subscribed topics
+if else loop to call different functions on the basis of message topic to update the data received by the client in the database tables
+
+while True:
+   Retreive data from following tables direction and zone wise:
+   1.project_weather
+   2.project_roadinfo
+   3.project_minortraffic
+   4.project_minoraccident
+   5.project_intersectionwarning
+   
+   broadcasting some messages to all the connected clients
+   publish the retrieved data according to different directions and zones on various topics
